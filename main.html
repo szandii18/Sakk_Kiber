@@ -1,0 +1,89 @@
+
+<html>
+    <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js"></script>
+
+    <title>Online chess simulator</title>
+
+    <style type= "text/css">
+              body{
+
+                background-image: url('chess.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+
+              }
+
+              #container
+              {
+                  text-align: center;
+
+              }
+
+              h1
+              {
+                  font-size: 60px;
+              }
+
+              h2
+              {
+                  font-size: 20px;
+              }
+
+
+              .button {
+                  background-color: Aqua; /* Green */
+                  border: border: 2px solid #555555;
+                  color: black;
+                  height:150px;
+                  width:300px;
+                  text-align: center;
+                  text-decoration: none;
+                  align: center;
+                  display: inline-block;
+                  font-size: 16px;
+                  border-radius: 12px;
+              }
+
+              .flex-parent {
+                  display: flex;
+                }
+
+                .jc-center {
+                  justify-content: center;
+                }
+
+                button.margin-right {
+                  margin-right: 50px;
+                }
+
+      </style>
+
+    </head>
+
+    <h1 style = "text-align: center;">Online chess simulator</h1>
+    <body onload="connect()">
+
+    <input type="file" id="file-selector">
+    <label id="log"></label>
+
+    <div id="container">
+        <button style=background-color:Aqua; onclick="init()" type="button"><h2>Back to default</h2></button>
+    </div>
+    <p id="demo"></p>
+
+    <div id="container">
+        <button style=background-color:Aqua; onclick="GoToEnd()" type="button"><h2>Go to end</h2></button>
+    </div>
+    <p id="demo"></p>
+
+    <div class="flex-parent jc-center">
+        <button type="button" class="button margin-right" onclick="myFuncBack()" ><h1>Back</h1></button>
+        <button type="button" class="button" onclick="myFunc()" ><h1>Next</h1></button>
+    </div>
+    <p id="demo"></p>
+
+    <script src="mqtt_sakk.js"></script>
+
+    </body>
+    </html>
